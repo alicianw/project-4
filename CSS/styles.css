@@ -1,7 +1,13 @@
-#land{
-    background: url('../images/bg.jpg');
+*{
+    background: url('../images/bg2.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+
+#land{
     font-size: 50px;
     text-align: center;
 }
