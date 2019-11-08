@@ -1,7 +1,7 @@
-*{
-    background: url('../images/bg2.jpg');
+html{
+    background: url('../images/bg3.jpg');
     background-position: center;
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
     height: 100%;
 }
@@ -10,4 +10,5 @@
 #land{
     font-size: 50px;
     text-align: center;
+    color: white;
 }
