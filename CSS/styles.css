@@ -5,7 +5,7 @@
     background-size:cover;
     background-repeat: no-repeat;
     height: 70vh;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
 
@@ -43,6 +43,7 @@ p{
 
 #three{
     margin-left: 10px;
+    font-size: 20px;
 }
 
 #frm2{
@@ -76,8 +77,23 @@ input{
 }
 
 /* pictures */
-img{
-   padding: 20px;
-   display: flex;
+.mid {
+    margin-top: 20px;
+    border-block: 50%;
+}
+
+/* nav bar */
+nav ul{
+    display: flex;
+    justify-content:flex-end;
+    list-style-type: none;
+    padding: 15px;
+    background: grey;
+}
+
+nav ul li a{
+    padding: 15px;
+    font-size: 20px;
+    color: black;
 }
 
