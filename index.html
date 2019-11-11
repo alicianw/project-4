@@ -7,28 +7,39 @@
 </head>
 
 <body>
+        <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+               <li><a href="about.html">About Us</a></li>
+            </ul> 
+        </nav>
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" id="intro">
     
     <div id="land">
       <p id="one"><b>ORDER </b></p> 
        <p><div id="two">A Slice of Heaven</div></p>
     </div>
      </div>
-      <div class="col-md-4" id="pic1">  
-        <img src="../project-4/images/pizza.jpg" width="531" height="400">
-        <p><b>Large</b></p>
       </div>
-      <div class="col-md-4" id="pic2" >
+
+    <div class=row >  
+      <div class="col-md-4">
+        <img src="../project-4/images/pizza.jpg" width="420" height="370">
+        <p><b>Large<b></p>
+      </div>      
+      <div class="col-md-4">
         <img src="../project-4/images/pizza2.jpg">
         <p><b>Medium</b></p>
       </div> 
-      <div class="col-md-4" id="pic3">
+      <div class="col-md-4">
         <img src="../project-4/images/pizza3.jpg">
         <p><b>Small</b></p>
-      </div> 
-      
+      </div>
+    </div> 
+        
     <div id="frm">
        <form onclick="result=false"> 
           <p><div id="three">
@@ -36,7 +47,12 @@
           </div></p>
           <hr>
  
-        <div id="frm2">  
+        <div id="frm2">
+          <select name="flavour" id="flvr">
+          <option value="meaty">Meaty</option>  
+          <option value="vegy">Vegeterian</option>  
+          </select>  
+            
           <select name="size" id="size">
           <option value="500">small  --500</option>
           <option value="800">medium  --800</option>  
@@ -50,25 +66,24 @@
 
           
           <select name="crust" id="crust">
-          <option value="150">thin  --150</option>
-          <option value="200">thick  --200</option>
+          <option value="150">thin   --150</option>
+          <option value="200">thick   --200</option>
           </select><br>
-
         </div>
 
         <div id="frm3">
+           <label for="flavour">Flavour</label><br> 
           <label for="size">Size</label><br>
           <label for="deliver">Deliver</label><br>
-          <label for="crust">Crust</label><br>
+          <label for="crust">Crust</label>
         </div>  
 
         <div id="bttn">
           <button type="button" onclick="order()">CONFIRM ORDER</button>
-          <output id = "result">result</output>
+          <output>result</output>
         </div>  
         </form>
     </div>
-</div>
     
 
     <script src="js/jquery.js"></script>
