@@ -2,51 +2,64 @@
 <html>
 <head>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
     <title>Slice of Heaven</title>
-    
 </head>
 
 <body>
-    <div id="land">
-      <p id="one"><b>
-        ORDER 
-      </b></p>  
-    <br>  
-      <p id="two"><b>
-         A Slice of Heaven 
-      </b></p>
-    </div>
 
-    <div id="you">
-       <form id="frm" onclick="result=false">
-          <h2>ORDER</h2> 
-          <p>Kindly place your order below</p>
+    <div class="container-fluid">
+        <div class="row">
+    
+    <div id="land">
+      <p id="one"><b>ORDER </b></p> 
+       <p><div id="two">A Slice of Heaven</div></p>
+    </div>
+      </div>
+       </div>
+
+       <img src="../project-4/images/pizza.jpg">
+       <!-- <img src="../project-4/images/pizza2.jpg"> -->
+
+    <div id="frm">
+       <form onclick="result=false"> 
+          <p><div id="three">
+              <b>Kindly place your order below</b>
+          </div></p>
           <hr>
  
-          <label for="size">Size</label>
+        <div id="frm2">  
           <select name="size" id="size">
           <option value="small">small</option>
           <option value="medium">medium</option>  
           <option value="large">large</option>  
           </select><br>
 
-          <label for="many">Amount</label>
-          <input id="many" type="number" placeholder="how many" name="name" required><br>
-
-          <label for="deliver">Deliver</label>
           <select name="deliver" id="deliver">
           <option value="yes">Yes</option> 
           <option value="no">No</option>   
           </select><br>
 
-          <label for="crust">Crust</label>
+          
           <select name="crust" id="crust">
           <option value="thin">thin</option>
           <option value="thick">thick</option>
           </select><br>
 
-          <button type="button" onclick="order">ORDER</button>
-          <output><b>Toatal Cost:</b></output>
+          <input id="many" type="number" placeholder="how many" name="name" required><br>
+        </div>
+
+        <div id="frm3">
+          <label for="size">Size</label><br>
+          <label for="deliver">Deliver</label><br>
+          <label for="crust">Crust</label><br>
+          <label for="many">Amount</label>
+        </div>  
+
+        <div id="bttn">
+          <button type="button" onclick="order">CONFIRM ORDER</button>
+          <output></output>
+        </div>  
         </form>
     </div>
 
