@@ -73,6 +73,23 @@ input{
     margin-top: 20%;
     margin-left: 10px;
     text-align: center;
-    
+}
+
+/* pictures */
+img{
+    padding: 20px;
+    display: inline-flex;
+}
+
+#pic1{
+   
+
+}
+
+#pic2{
+   margin-left: 60%;
+}
+
+#pic3{
     
 }
