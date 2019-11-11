@@ -81,7 +81,6 @@ input{
     margin-top: 20px;
     border-block: 50%;
 }
-
 /* nav bar */
 nav ul{
     display: flex;
@@ -97,3 +96,6 @@ nav ul li a{
     color: black;
 }
 
+h2{
+    text-align: center;
+}
