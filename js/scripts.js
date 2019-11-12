@@ -1,13 +1,3 @@
-// function order() {
-//     var size= parseInt (document.getElementByID("size").value);
-//     var deliver=parseInt (document.getElementByID("deliver").value);
-//     var crust= parseInt (document.getElementByID("crust").value);
-
-// var total = size + deliver + crust;
-
-// return document.getElementById("total").innerHTML = size + " " + deliver + " " + crust + " " + total;
-
-// } 
 let total=0;
 
 $(document).ready(function(){ 
@@ -47,7 +37,7 @@ $(document).ready(function(){
         let pizzaSize =parseInt($("#size option:selected").val());
         let pizzaDeliver =parseInt($("#deliver option:selected").val());
         let pizzaCrust =parseInt($("#crust option:selected").val());
-        let pizzaTopping=[];
+        let pizzaTopping=[];finalorder
 
         $.each($("input[name='toppings']:checked"), function() {
             pizzaTopping.push($(this).val());
@@ -56,7 +46,7 @@ $(document).ready(function(){
           let total_topping = pizzaTopping.length * 80;
           total= pizzaSize+pizzaCrust+pizzaDeliver+total_topping;
 
-          newOrder = new Eat(pizzaFlavour, pizzaSize, pizzaDeliver, pizzaCrust,pizzaTopping,total);
+          var newOrder = new Eat(pizzaFlavour, pizzaSize, pizzaDeliver, pizzaCrust,pizzaTopping,total);
     
           $("#finalorder").append(
             `<tr><td id="pFlavour">` +
@@ -68,7 +58,7 @@ $(document).ready(function(){
               `</td><td id="pDeliver"> ` +
               newOrder.deliver +
               `</td><td id="pTopping"> ` +
-              newOrder.toppings.join(",") +
+              newOrder.topping.join(",") +
               `</td><td id="total"> ` +
               newOrder.total +
               `</td></tr>`
