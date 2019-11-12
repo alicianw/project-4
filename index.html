@@ -1,5 +1,5 @@
 <!DOCTYPE html>  
-<html> 
+<html>   
 <head>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/bootstrap.css">
@@ -72,6 +72,10 @@
           <option value="150">thin   --150</option>
           <option value="200">thick   --200</option>
           </select><br>
+
+          <label for="Toppings"
+          >Select Your preferred Toppings: (each at 80)
+        </label>
         </div>
 
         <div id="frm3">
@@ -79,9 +83,10 @@
           <label for="size">Size</label><br>
           <label for="deliver">Deliver</label><br>
           <label for="crust">Crust</label><br>
-          <label for="toopings">Toppings</label>
-
+          <label for="topping">Toppings</label><br>
         </div>  
+        
+       
 
         <div class="custom-control custom-checkbox custom-control-inline">
           <input
@@ -103,8 +108,7 @@
             value="sausage"
             name="toppings"
           />
-          <label class="custom-control-label" for="sausage"
-            >Sausage</label
+          <label class="custom-control-label" for="sausage" >Sausage</label
           >
         </div>
         <div class="custom-control custom-checkbox custom-control-inline">
@@ -132,13 +136,12 @@
           >
         </div>
     
-
-        <div id="bttn">
-          <button  id="btn_order" type="button">CONFIRM ORDER</button>
-          <br>
-        </div>  
+        <button class="btn btn-outline-warning btn-block mg-b-5" id="btn_order">
+            CONFIRM ORDER
+          </button>
         </form>
-    </div>
+        </div> 
+
         <div id="orders">
           <table class="table table-sm  pizza">
             <thead>
@@ -147,6 +150,7 @@
                 <th scope="col">Size</th>
                 <th scope="col">Crust</th>
                 <th scope="col">Topping</th>
+                <th scope="col">Delivery</th>
                 <th scope="col">Total</th>
               </tr>
             </thead>
@@ -156,12 +160,16 @@
                 <td id="pSize"></td>
                 <td id="pCrust"></td>
                 <td id="pTopping"></td>
+                <td id="pDeliver"></td>
                 <td id="total"></td>
               </tr>
             </tbody>
           </table>
+          <div id="bttn2">
+              <button id="btn_add" type="button">ADD PIZZA</button>
+              <br>
+            </div>
         </div>
-
 
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>

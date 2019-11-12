@@ -10,7 +10,7 @@
 // } 
 let total=0;
 
-$(document).ready(function(){
+$(document).ready(function(){ 
     function Eat(flavour, size, deliver, crust,topping,total){
         this.flavour =flavour;
         this.size =size;
@@ -21,7 +21,7 @@ $(document).ready(function(){
     }
 
     $("#btn_order").click(function(event){
-    let pizzaFlavour =parseInt($("#flvr option:selected").val());
+    let pizzaFlavour =$("#flvr option:selected").val();
     let pizzaSize =parseInt($("#size option:selected").val());
     let pizzaDeliver =parseInt($("#deliver option:selected").val());
     let pizzaCrust =parseInt($("#crust option:selected").val());
@@ -32,7 +32,7 @@ $(document).ready(function(){
       });
     
       let total_topping = pizzaTopping.length * 80;
-      total= pizzaSize+pizzaCrust+pizzaDeliver+pizzaTopping;
+      total= pizzaSize+pizzaCrust+pizzaDeliver+total_topping;
 
     $("#pFlavour").html($("#flvr option:selected").val());
     $("#pCrust").html($("#crust option:selected").val());
@@ -40,6 +40,40 @@ $(document).ready(function(){
     $("#pDeliver").html($("#deliver option:selected").val());
     $("#pTopping").html(pizzaTopping.join(","));
     $("#total").html(total);
+
+    $("#btn_add").click(function(event){
+        
+        let pizzaFlavour =$("#flvr option:selected").val();
+        let pizzaSize =parseInt($("#size option:selected").val());
+        let pizzaDeliver =parseInt($("#deliver option:selected").val());
+        let pizzaCrust =parseInt($("#crust option:selected").val());
+        let pizzaTopping=[];
+
+        $.each($("input[name='toppings']:checked"), function() {
+            pizzaTopping.push($(this).val());
+          });
+
+          let total_topping = pizzaTopping.length * 80;
+          total= pizzaSize+pizzaCrust+pizzaDeliver+total_topping;
+
+          newOrder = new Eat(pizzaFlavour, pizzaSize, pizzaDeliver, pizzaCrust,pizzaTopping,total);
+    
+          $("#finalorder").append(
+            `<tr><td id="pFlavour">` +
+              newOrder.flavour +
+              `</td><td id="pSize"> ` +
+              newOrder.size +
+              `</td><td id="pCrust"> ` +
+              newOrder.crust +
+              `</td><td id="pDeliver"> ` +
+              newOrder.deliver +
+              `</td><td id="pTopping"> ` +
+              newOrder.toppings.join(",") +
+              `</td><td id="total"> ` +
+              newOrder.total +
+              `</td></tr>`
+          );
+        });
 
     event.preventDefault();
     })
