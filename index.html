@@ -1,5 +1,5 @@
 <!DOCTYPE html>  
-<html>
+<html> 
 <head>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/bootstrap.css">
@@ -78,16 +78,90 @@
            <label for="flavour">Flavour</label><br> 
           <label for="size">Size</label><br>
           <label for="deliver">Deliver</label><br>
-          <label for="crust">Crust</label>
+          <label for="crust">Crust</label><br>
+          <label for="toopings">Toppings</label>
+
         </div>  
 
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="pepperoni"
+            value="pepperoni"
+            name="toppings"
+          />
+          <label class="custom-control-label" for="pepperoni"
+            >Pepperoni</label
+          >
+        </div>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="sausage"
+            value="sausage"
+            name="toppings"
+          />
+          <label class="custom-control-label" for="sausage"
+            >Sausage</label
+          >
+        </div>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="chicken"
+            value="chicken"
+            name="toppings"
+          />
+          <label class="custom-control-label" for="chicken"
+            >Chicken</label
+          >
+        </div>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="beef"
+            value="beef"
+            name="toppings"
+          />
+          <label class="custom-control-label" for="beef"
+            >Beef</label
+          >
+        </div>
+    
+
         <div id="bttn">
-          <button  id="btn_order" type="button" onclick="order()">CONFIRM ORDER</button>
+          <button  id="btn_order" type="button">CONFIRM ORDER</button>
           <br>
-          <output id="total">TOTAL:</output>
         </div>  
         </form>
     </div>
+        <div id="orders">
+          <table class="table table-sm  pizza">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Size</th>
+                <th scope="col">Crust</th>
+                <th scope="col">Topping</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="finalorder">
+              <tr>
+                <td id="pFlavour"></td>
+                <td id="pSize"></td>
+                <td id="pCrust"></td>
+                <td id="pTopping"></td>
+                <td id="total"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
 
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
