@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>   
 <html>   
 <head>
     <link rel="stylesheet" href="CSS/styles.css">
@@ -28,16 +28,16 @@
     <div class = "container">
         <div class="row">
              <div class ="col-md-4 p-1">
-                    <img src="../project-4/images/pizza.jpg" class="img-fluid">
-                    <p><b>Large</b></p>
+                    <img src="../project-4/images/pizza4.jpg" class="img-fluid">
+                    <p><b>Meaty</b></p>
              </div>
              <div class ="col-md-4 p-1">
                     <img src="../project-4/images/pizza2.jpg" class="img-fluid">
-                    <p><b>Medium</b></p>
+                    <p><b>Mixed</b></p>
              </div>
              <div class ="col-md-4 p-1">
                     <img src="../project-4/images/pizza3.jpg" class="img-fluid">
-                    <p><b>Small</b></p>
+                    <p><b>Vegeterian</b></p>
           </div>
        </div>
      </div>
@@ -54,6 +54,7 @@
           <select name="flavour" id="flvr">
           <option value="meaty">Meaty</option>  
           <option value="vegy">Vegeterian</option>  
+          <option value="mixed">Mixed</option>
           </select>  
             
           <select name="size" id="size">
@@ -73,10 +74,10 @@
           <option value="200">thick   --200</option>
           </select><br>
 
-          <label for="Toppings"
-          >Select Your preferred Toppings: (each at 80)
-        </label>
-        </div>
+          <label for="Toppings">
+            <b>Select Your preferred Toppings: (each at 80)</b> 
+          </label>
+       </div>
 
         <div id="frm3">
            <label for="flavour">Flavour</label><br> 
@@ -165,8 +166,9 @@
               </tr>
             </tbody>
           </table>
-          <div id="bttn2">
-              <button id="btn_add" type="button">ADD PIZZA</button>
+          <button class="btn btn-outline-warning btn-block mg-b-5" id="btn_add">
+             ADD PIZZA
+            </button>
               <br>
             </div>
         </div>
